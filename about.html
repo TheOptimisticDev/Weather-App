@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+  <title>Weather App</title>
+</head>
+<body>
+  <nav class="navbar navbar-expand">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="./index.html"><img src="./assets/images/logo.png" alt="Logo" style="max-height: 100px;"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="./index.html">Home</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+             Menu
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="./support.html">Support</a></li>
+              <li><a class="dropdown-item" href="./about.html">About Us</a></li>
+            </ul>
+          </li>
+          
+        </ul>
+        <div class="spinner-container text-center d-none" id="loadingSpinner">
+          <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <p class="mt-2">Loading...</p>
+        </div>
+        <form class="d-flex" id="weatherForm">
+          <input id="city" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success " type="submit" id="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <section class="about-section">
+    <div class="container">
+        <br><h1>About Us</h1>
+        <br><br>
+        <p>Welcome to the Weather App. This app provides real-time weather
+            information and forecasts for various locations. Stay updated with accurate temperature, humidity, wind
+            speed, and more!</p>
+
+        <br><br><h4>Developer Information</h4>
+        <p>I'm Mfumu Wealth Mabunda, the developer behind this Weather App. I am a passionate Software Engineer with a strong interest in web and app development,
+             and I created this app as part of my portfolio project.
+              My goal is to provide users with a seamless and enjoyable experience while keeping them informed about real-time weather conditions and forecasts and showcase my development skills.</p>
+
+        <br><br><h4>Technologies Used</h4>
+        <p>The Weather App is built using HTML, CSS, and JavaScript. It utilizes modern web technologies to
+             provide a seamless and responsive user experience.</p>
+        
+        <br><br><h4>Contact Information</h4>
+        <p>For inquiries or feedback, you can reach out to Mfumu Wealth Mabunda via email at
+            wealth.mabunda@gmail.com.</p>
+    </div>
+</section>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+  <script src="script.js"></script>
+  <div class="footer">
+    <footer class="site-footer">
+      <p class="footer">&copy; Weather App 2024 by TheOptimisticDev. All rights reserved.</p>
+    </footer>
+    
+  </div>
+</body>
+</html>

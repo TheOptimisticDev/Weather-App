@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/favicon-16x16.png">
+    <link rel="icon" href="./assets/icons/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="style.css">
+  <title>Weather App</title>
+</head>
+<body>
+  <nav class="navbar navbar-expand">
+    <div class="container-fluid">
+      <a class="navbar-brand"><img src="./assets/images/logo.png" alt="Logo" style="max-height: 100px;"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">Home</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+             Menu
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="./support.html">Support</a></li>
+              <li><a class="dropdown-item" href="./about.html">About Us</a></li>
+              <li><a class="dropdown-item" href="./favourites.html">Favourites</a></li>
+            </ul>
+          </li>
+          
+        </ul>
+        <div class="spinner-container text-center d-none" id="loadingSpinner">
+          <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <p class="mt-2">Loading...</p>
+        </div>
+        <form class="d-flex" id="weatherForm">
+          <input id="city" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success " type="submit" id="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <div class="cont">
+    
+    <h1 class="my-4 text-center header-anim">Welcome to our Weather App</h1>
+    <p class="my-4 text-center header-anim">Get real-time weather information and forecasts for any location. Stay updated with accurate temperature, humidity, wind speed, and more!</p>
+    <h1 class="my-4 text-center header-anim"><span id="cityName"></span></h1>
+    <main>
+      <div class="row row-cols-1 row-cols-md-3 mb-3 mx-10 text-center cards-container">
+        <div class="col card-1">
+          <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card-header py-3 text-white" style="background-color: #033658ed;">
+              <h4 class="my-0 fw-normal">Temperature <i class="fas fa-thermometer-half" style="font-size: 50px; color: #f82b2b;"></i></h4>
+            </div>
+            <div class="card-body">
+              <h2 class="card-title pricing-card-title"><span id="temp2"></span><small class="text-muted fw-light"><sup><span>&#8451;</span></sup></small>
+              </h2>
+              <ul class="list-unstyled mt-3 mb-4" id="weatherInfo">
+                <li>Temperature: <span id="temp"></span></li>
+                <li>Minimum: <span id="min_temp"></span></li>
+                <li>Maximum: <span id="max_temp"></span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col card-2">
+          <div class="card mb-4 rounded-3 shadow-sm" >
+            <div class="card-header py-3 text-white" style="background-color: #033658ed;">
+              <h4 class="my-0 fw-normal">Humidity <i class="fas fa-tint" style="font-size: 50px; color: #fcfcfc;"></i></h4>
+            </div>
+            <div class="card-body">
+              <h2 class="card-title pricing-card-title"><span id="humidity2"></span><small class="text-muted fw-light">%</small>
+              </h2>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>Wind: <span id="wind_degrees"></span></li>
+                <li>Feels Like: <span id="feels_like"></span></li>
+                <li>Humidity: <span id="humidity"></span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col card-3">
+          <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card-header py-3 text-white" style="background-color: #033658ed;">
+              <h4 class="my-0 fw-normal">Wind <i class="fas fa-wind" style="font-size: 50px; color: #b4b4b485;"></i></h4>
+            </div>
+            <div class="card-body">
+              <h2 class="card-title pricing-card-title"><span id="wind_speed2"></span><small class="text-muted fw-light">Km/h</small>
+              </h2>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>Wind Speed: <span id="wind_speed"></span></li>
+                <li>Sunrise: <span id="sunrise"></span></li>
+                <li>Sunset: <span id="sunset"></span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col card-4">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3 text-white" style="background-color: #033658ed;">
+            <h4 class="my-0 fw-normal">Forecast <i class="fas fa-calendar-alt" style="font-size: 40px; color: #cacaca;"></i></h4>
+          </div>
+          <img class="small-image" src="./assets/images/true404.png" alt="404">
+          <div class="card-body">
+            <h2 class="card-title pricing-card-title"><span id="forecast"></span></h2>
+            <ul class="list-unstyled mt-3 mb-4" id="forecastList">
+              <!-- Forecast detail -->
+            </ul>
+          </div>
+        </div>
+      </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+  <script src="script.js"></script>
+  <div class="footer">
+    <footer class="site-footer">
+      <p class="footer">&copy; Weather App 2024 by TheOptimisticDev. All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>

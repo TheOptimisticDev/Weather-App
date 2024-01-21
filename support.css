@@ -1,0 +1,187 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #0b0909;
+    text-align: center;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url(assets/images/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 20px;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+.navbar-brand img {
+    mix-blend-mode: lighten;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+h1, h4, p, #cityName {
+    color: #f1f1f1;
+    font-weight: bold;
+    -webkit-text-stroke: 1px rgb(66, 66, 66);
+}
+
+h1 {
+    font-size: 45px;
+    color: #f1f1f1;
+}
+
+h4, p {
+    font-size: 30px;
+    display: inline-block;
+}
+
+.btn-outline-success {
+    color: #f9f9f9;
+    border-color: #fff;
+}
+
+.btn-outline-success:hover {
+    color: #f9f9f9;
+    border-color: #fff;
+}
+
+.nav-link {
+    position: relative;
+    font-size: 18px;
+    transition: color 0.3s ease;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.nav-link:hover {
+    color: #ffffff;
+}
+
+#submit {
+    background-color: rgba(0, 21, 255, 0);
+    color: #fff;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #033658a8;
+    border-radius: 5px;
+}
+
+.navbar-brand {
+    color: #07060600;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.navbar-toggler-icon {
+    background-color: #fff;
+}
+
+.navbar-nav a {
+    color: #bababa;
+    background-color: #57697400;
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-block;
+    -webkit-text-stroke: 1px black;
+}
+
+.form-control {
+    width: 50%;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #2b1c8259;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #d5d5d5;
+}
+
+p {
+    color: #d8d8d8;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #d5d5d5;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    text-align: left;
+}
+
+button {
+    background-color: #130252;
+    border-radius: 5px;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+#favouritesList {
+    border: 2px solid red;
+    text-decoration: none;
+}
+
+.footer {
+    bottom: 0;
+    width: 100%;
+    font-size: 18px;
+    color: #f1f1f1;
+    text-align: center;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+
+    .navbar-collapse {
+        background-color: #3498db00;
+    }
+
+    .navbar-nav {
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar-nav a {
+        display: block;
+        padding: 1rem;
+        border-bottom: 1px solid #fff;
+    }
+
+    .navbar-toggler-icon {
+        background-color: #fff;
+    }
+
+    .cards-container {
+        flex-direction: column;
+    }
+}
