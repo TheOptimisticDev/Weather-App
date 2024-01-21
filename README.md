@@ -66,7 +66,7 @@ This is a straightforward weather app that provides users with basic current wea
 
 - Weather data sourced from API Ninjas [API Ninjas](https://api-ninjas.com/).
 - Logo obtained from Vectors [Vectors](https://www.vecteezy.com/png/27079477-sun-with-rain-light-weather-3d-illustration).
-- Gif's and background image obtained from Gifer [gifer](https://gifer.com/en/).
+- Gif's and background image obtained from Gifer [Gifer](https://gifer.com/en/).
 - Illustrations obtained from Icons8 [icons8](https://icons8.com/illustrations).
 - Icons obtained from Google fontawesome icons [google](https://fontawesome.com/).
 - Favicon created from Favicon.io [Favicon](favicon.io).

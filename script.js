@@ -1,8 +1,7 @@
 const options = {
     method: 'GET',
     headers: {
-        'X-RapidAPI-Key': '5d1150382dmsh8148168445631d9p19de75jsn7af80ac1db5d',
-        'X-RapidAPI-Host': 'weather-by-api-ninjas.p.rapidapi.com'
+        // Add api data
     }
 };
 
